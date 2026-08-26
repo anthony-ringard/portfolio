@@ -1,0 +1,18 @@
+node_modules
+dist
+out
+output
+.next
+.next.backup-*
+.vite
+.DS_Store
+*.log
+.env
+.env.*
+.env*.local
+.claude/
+
+# Notes de travail internes (pas destinées au repo public)
+docs/
+*.htm
+*_files/

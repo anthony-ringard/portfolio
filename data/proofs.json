@@ -1,0 +1,27 @@
+[
+  {
+    "label": "Expérience",
+    "value": "10 ans",
+    "detail": "Backend PHP/Symfony"
+  },
+  {
+    "label": "Historique",
+    "value": "2 230",
+    "detail": "commits suivis de 2021 à 2026"
+  },
+  {
+    "label": "API",
+    "value": "1 149",
+    "detail": "commits backend analysés"
+  },
+  {
+    "label": "Équipe actuelle",
+    "value": "16 pers.",
+    "detail": "3 leads, 1 archi, 6 seniors dont moi"
+  },
+  {
+    "label": "Mission",
+    "value": "600 EUR/j",
+    "detail": "Full remote / présence ponctuelle possible"
+  }
+]

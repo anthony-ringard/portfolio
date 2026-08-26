@@ -1,0 +1,74 @@
+{
+  "nav": [
+    { "href": "#missions", "label": "missions" },
+    { "href": "#realisations", "label": "réalisations" },
+    { "href": "#expertises", "label": "expertises" },
+    { "href": "#about", "label": "à propos" },
+    { "href": "#contact", "label": "contact" }
+  ],
+  "ui": {
+    "skipLink": "Aller au contenu",
+    "navContact": "Contact",
+    "projectContext": "Besoin",
+    "projectRole": "Intervention",
+    "projectResult": "Résultat",
+    "goodFitTitle": "Bon contexte",
+    "notFitTitle": "Hors cible",
+    "aboutMarkersTitle": "Repères",
+    "aboutMarkers": [
+      { "label": "Autonome", "detail": "Je prends un sujet du cadrage à la mise en prod, sans attendre d'instructions." },
+      { "label": "Direct", "detail": "Un seul interlocuteur technique, pas de couche de gestion intermédiaire." },
+      { "label": "Senior", "detail": "10 ans intégré dans des équipes produit, pas seulement en mission courte." },
+      { "label": "Production", "detail": "Habitué aux astreintes et aux correctifs en conditions réelles, pas qu'au code propre en local." }
+    ],
+    "socialMalt": "Malt",
+    "socialLinkedin": "LinkedIn",
+    "socialCv": "CV (PDF)",
+    "keywordsTitle": "Mots-clés recruteur",
+    "signalsTitle": "À retenir",
+    "projectProof": "Résultat concret",
+    "mailSubject": "Mission freelance Symfony / automatisation e-commerce",
+    "mailBody": "Bonjour Anthony,\n\nContexte :\nObjectif :\nDélai :\n"
+  },
+  "hero": {
+    "eyebrow": "Freelance PHP/Symfony / API / automatisation",
+    "primaryCta": "Parler d'une mission",
+    "secondaryCta": "Voir les cas concrets",
+    "diagramTitle": "Intervention type",
+    "diagramSteps": ["Problème métier", "Cadrage technique", "Traitement async", "Intégration externe", "Suivi production"],
+    "diagramFootnote": "Lisible pour la technique, utilisable directement par les équipes."
+  },
+  "sections": {
+    "missions": {
+      "label": "Missions",
+      "title": "Missions freelance Symfony pour flux métier critiques.",
+      "description": "Backend PHP/Symfony, e-commerce, API, support client, marketplace, paiement, catalogue, logistique, WMS, automatisation et production."
+    },
+    "projects": {
+      "label": "Réalisations",
+      "title": "5 cas concrets, orientés besoin métier.",
+      "description": "Lecture rapide : problème à résoudre, intervention technique, résultat obtenu. Les détails restent anonymisés."
+    },
+    "expertises": {
+      "label": "Expertises",
+      "title": "Ce que je connais déjà, sans courbe d'apprentissage.",
+      "intro": "Simplifier une tâche répétitive, fiabiliser un flux qu'une équipe utilise tous les jours, enlever une friction : voilà ce qui guide le choix des outils ci-dessous. Le reste n'est que du détail technique."
+    },
+    "stack": {
+      "label": "Stack",
+      "title": "Stack utile pour livrer des applications métier."
+    },
+    "about": {
+      "label": "À propos",
+      "title": "10 ans de backend. Pas 10 ans de slides.",
+      "statLabel": "En activité depuis",
+      "statValue": "2016",
+      "statDetail": "10 ans de PHP/Symfony en production, pas en side-project"
+    },
+    "contact": {
+      "label": "Contact",
+      "title": "Une question avant de se lancer ? Posez-la.",
+      "description": "Cadrage encore flou, doute sur la faisabilité, besoin d'un avis technique : écrivez-moi, même sans brief complet. Pas besoin d'un cahier des charges béton. Full remote / présence ponctuelle possible (Nord), 600 EUR/j."
+    }
+  }
+}

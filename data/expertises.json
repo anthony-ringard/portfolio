@@ -1,0 +1,53 @@
+[
+  {
+    "id": "backend",
+    "title": "Backend Symfony",
+    "summary": "APIs, domaines métier, traitements longs, maintenance de socles e-commerce existants.",
+    "points": [
+      "Contrôleurs API, Doctrine, migrations, modèles",
+      "Commandes Symfony, subscribers, handlers, traitements asynchrones",
+      "Maintenir un module existant sans casser ce qui tourne déjà en production"
+    ]
+  },
+  {
+    "id": "payment",
+    "title": "Paiement & checkout",
+    "summary": "Flux financiers intégrés au parcours e-commerce et au back-office.",
+    "points": [
+      "Paiement fractionné, wallet, carte, remboursement, checkout",
+      "Statuts, retours prestataires, cas d'erreur — c'est souvent là que ça casse",
+      "Des règles backend explicites plutôt qu'une logique éclatée un peu partout"
+    ]
+  },
+  {
+    "id": "catalog",
+    "title": "Automatisation & IA appliquée",
+    "summary": "Des workflows qui retirent du manuel entre outils e-commerce, support et back-office.",
+    "points": [
+      "n8n, Make, commandes Slack, webhooks, workers, traitements par lot",
+      "Génération PDF/ZIP, synchro de tickets, appels API internes",
+      "OpenAI/GPT pour enrichir un catalogue ou préparer des réponses support, dans un flux contrôlé",
+      "Pensés pour être utilisés par une équipe, pas juste pour tourner en démo"
+    ]
+  },
+  {
+    "id": "supply-chain",
+    "title": "Supply chain, support & intégrations",
+    "summary": "Transporteurs, WMS, marketplaces, Zendesk et flux opérationnels connectés.",
+    "points": [
+      "Tracking colis, génération d'étiquettes, reprises d'erreur",
+      "WMS reverse, stockage, remboursement, Mirakl/Zendesk, clients API TypeScript",
+      "Docker, Kubernetes, Helm, GitLab CI, et une mise en prod qui avance par étapes"
+    ]
+  },
+  {
+    "id": "ops",
+    "title": "Production & déploiement",
+    "summary": "Pipelines, workers, configurations : ce qui fait tourner les flux au quotidien.",
+    "points": [
+      "Docker, GitLab CI, Kubernetes, Helm, valeurs d'environnement",
+      "Consumers, cronjobs, workers, healthchecks",
+      "Des correctifs de prod à périmètre limité, qu'on peut retracer après coup"
+    ]
+  }
+]

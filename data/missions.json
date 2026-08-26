@@ -1,0 +1,45 @@
+{
+  "items": [
+    {
+      "title": "Fiabiliser un backend Symfony",
+      "summary": "Pour une équipe qui cherche un freelance Symfony capable de faire évoluer un socle e-commerce existant sans casser paiement, catalogue, support ou logistique.",
+      "points": [
+        "Audit des modules, des APIs, de Doctrine et des traitements asynchrones",
+        "Refonte ciblée. La dette technique est priorisée, pas traitée en bloc",
+        "Mise en production progressive, en surveillant les cas d'erreur"
+      ],
+      "outcome": "Un backend qu'on peut relire et modifier sans y passer la semaine, et sans grand soir."
+    },
+    {
+      "title": "Automatiser un workflow e-commerce",
+      "summary": "Pour réduire les tâches manuelles entre magasins, marketplace, support client, catalogue ou back-office.",
+      "points": [
+        "Commandes Slack, scénarios n8n/Make, webhooks, workers et reprises d'erreur",
+        "Synchronisation avec Mirakl, Zendesk, Google Sheets ou des outils internes",
+        "Sorties directement utilisables : PDF, ZIP, tickets, logs, statuts"
+      ],
+      "outcome": "Moins de ressaisie, moins d'oublis, et un flux qu'on peut suivre à la trace."
+    },
+    {
+      "title": "Intégrer paiement, supply chain ou IA utile",
+      "summary": "Pour connecter un service externe quand la valeur attendue est opérationnelle, pas simplement technique.",
+      "points": [
+        "Prestataires paiement, transporteurs, WMS, marketplaces, Zendesk et APIs IA",
+        "Statuts, webhooks, erreurs, logs — et les contrôles qui vont avec",
+        "Une architecture qui laisse l'humain valider quand ça compte"
+      ],
+      "outcome": "Une intégration qui tourne en production et que l'équipe comprend sans moi."
+    }
+  ],
+  "goodFit": [
+    "Plateforme e-commerce avec un backend Symfony existant",
+    "Besoin d'un renfort backend Symfony senior dans une équipe technique structurée",
+    "Un sujet concret : paiement, catalogue, support, marketplace, logistique, WMS, automatisation ou intégration",
+    "Un outil interne avec front Vue, TypeScript, SvelteKit ou Twig connecté à un backend existant"
+  ],
+  "notFit": [
+    "Landing page marketing seule",
+    "Design UI pur sans enjeu backend",
+    "Maintenance WordPress ou mobile natif"
+  ]
+}

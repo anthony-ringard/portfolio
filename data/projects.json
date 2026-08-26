@@ -1,0 +1,117 @@
+[
+  {
+    "id": "business-automation",
+    "name": "Automatisations métier : affiches magasin, Mirakl, Zendesk & IA",
+    "type": "Automatisation e-commerce anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Deux flux automatisés pour retirer du manuel côté magasins et support client : génération d'affiches depuis Slack, puis synchronisation Mirakl/Zendesk avec réponses assistées par IA.",
+    "context": "Il fallait produire rapidement des PDF magasin après inventaire, et transformer les messages marketplace en tickets support suivis dans Zendesk.",
+    "role": "Création de commandes Slack, scénarios n8n, Lambda de génération PDF, orchestration Make toutes les 15 minutes, déclencheurs Zendesk, API interne et appel OpenAI pour préparer les réponses client.",
+    "result": "Les équipes récupèrent leurs PDF/ZIP directement dans Slack. Les messages Mirakl arrivent dans Zendesk sans ressaisie, et les réponses client peuvent être préparées par IA, dans un flux qui reste contrôlé.",
+    "metrics": [
+      { "label": "Templates", "value": "3 affiches" },
+      { "label": "Cadence", "value": "15 min" },
+      { "label": "Canaux", "value": "Slack + Zendesk" }
+    ],
+    "impact": [
+      "Une affiche PDF par ligne de CSV, regroupée en ZIP directement dans le canal Slack",
+      "Moins de copier-coller entre marketplace, support et outils internes",
+      "Réponses assistées par OpenAI via une API interne, sur des règles et déclencheurs déjà en place"
+    ],
+    "stack": ["AWS Lambda", "n8n", "Make", "Slack API", "Google Sheets", "Mirakl", "Zendesk", "OpenAI API"],
+    "note": "Cas anonymisé ; les volumes exacts peuvent être ajoutés dès qu'ils sont confirmés publiquement."
+  },
+  {
+    "id": "ia-catalogue",
+    "name": "Attributs produit & contenus assistés par IA",
+    "type": "Production e-commerce anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Workflow asynchrone pour enrichir les données produit, générer des attributs catalogue et préparer leur exploitation côté recherche, filtres et back-office.",
+    "context": "Publier et exploiter un catalogue plus riche, sans bloquer le parcours utilisateur ni dépendre d'opérations manuelles à rallonge.",
+    "role": "Mise en place de messages et handlers Messenger, commande CLI, générateurs de prompts, accès Doctrine et orchestration du traitement.",
+    "result": "Le traitement catalogue tourne maintenant hors du parcours utilisateur, en tâche de fond : l'équipe peut le relancer et le surveiller elle-même.",
+    "metrics": [
+      { "label": "Période", "value": "2026" },
+      { "label": "Mode", "value": "Async" },
+      { "label": "Domaine", "value": "Catalogue" }
+    ],
+    "impact": [
+      "Les traitements longs vont aux workers, pas au parcours utilisateur",
+      "L'IA comme composant contrôlé, pas comme argument marketing",
+      "Intégration avec les modèles produit, la recherche et le back-office"
+    ],
+    "stack": ["PHP", "Symfony Messenger", "OpenAI", "Doctrine", "Elasticsearch", "Back-office"],
+    "note": "Cas anonymisé à partir de l'historique de commits ; tickets et noms internes masqués."
+  },
+  {
+    "id": "payment-refund",
+    "name": "Paiement, checkout & remboursements",
+    "type": "Production e-commerce anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Évolutions backend sur des flux de paiement, de checkout et de remboursement avec statuts, validations et retours prestataires.",
+    "context": "Garder un checkout stable pendant qu'on ajoute des moyens de paiement, des remboursements et des règles commerciales.",
+    "role": "Interventions sur contrôleurs, services de paiement, commandes Symfony, migrations Doctrine, retours prestataires et cas d'erreur.",
+    "result": "Le checkout a gagné des règles explicites côté backend, plutôt qu'éparpillées un peu partout, et les correctifs sont livrés sans jamais le déstabiliser.",
+    "metrics": [
+      { "label": "Période", "value": "2022-2025" },
+      { "label": "Surface", "value": "Checkout" },
+      { "label": "Flux", "value": "Paiement + refund" }
+    ],
+    "impact": [
+      "Statuts et validations gérés côté backend, pas éparpillés dans le code",
+      "Remboursements partiels, commerciaux ou liés au moyen de paiement, tous pris en compte",
+      "Des évolutions qui tiennent dans un environnement déjà en production, pas en labo"
+    ],
+    "stack": ["PHP", "Symfony", "Doctrine", "Contrôleurs API", "Tests", "Back-office"],
+    "note": "Les noms de prestataires existent dans l'historique, mais restent masqués tant que leur affichage public n'est pas confirmé."
+  },
+  {
+    "id": "transport-labels",
+    "name": "Tracking, transporteurs & étiquettes",
+    "type": "Production logistique anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Intégrations transporteurs autour du tracking, de la génération d'étiquettes, des colis et des contraintes logistiques.",
+    "context": "Fiabiliser le suivi colis, la génération d'étiquettes et les reprises d'erreur, dans un environnement logistique déjà en production.",
+    "role": "Développement de clients API, commandes de reprise, contrôleurs, modèles de shipment, générateurs d'étiquettes et configuration d'infrastructure.",
+    "result": "Les flux transport sont isolés proprement et documentés : les équipes qui suivent les commandes n'ont plus besoin de moi pour s'en servir.",
+    "metrics": [
+      { "label": "Période", "value": "2021-2026" },
+      { "label": "Flux", "value": "Tracking" },
+      { "label": "Support", "value": "Labels" }
+    ],
+    "impact": [
+      "Récupération et mise à jour des liens et numéros de tracking",
+      "Génération d'étiquettes, adaptée à chaque format transporteur",
+      "Déploiements et workers ajustés au rythme des traitements logistiques"
+    ],
+    "stack": ["Symfony", "Commandes CLI", "RabbitMQ / Messenger", "APIs transporteurs", "Docker", "Kubernetes / Helm"],
+    "note": "Cas anonymisé ; les transporteurs précis sont listés dans les questions à confirmer avant publication."
+  },
+  {
+    "id": "wms-reverse",
+    "name": "WMS reverse, stockage & remboursement",
+    "type": "Production interne anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Parcours de retour produit dans un WMS : recherche de commande, sélection des produits, stockage, remboursement et page finale.",
+    "context": "Guider les équipes opérationnelles dans le reverse produit, sans éparpiller les règles de stockage et de remboursement.",
+    "role": "Évolutions d'interface, modèles TypeScript, clients API, validations de stockage et traitement du remboursement.",
+    "result": "Le parcours reverse guide maintenant les équipes opérationnelles étape par étape, avec moins de logique cachée dans les écrans.",
+    "metrics": [
+      { "label": "Période", "value": "2024-2025" },
+      { "label": "Interface", "value": "SvelteKit" },
+      { "label": "Domaine", "value": "Reverse" }
+    ],
+    "impact": [
+      "Parcours découpé en étapes claires : commande, produits, stockage, remboursement, confirmation",
+      "Validation des allocations de stockage et des quantités",
+      "Correction de plusieurs cas litigieux sur les remboursements multiples"
+    ],
+    "stack": ["SvelteKit", "TypeScript", "Clients API", "Interfaces métier", "i18n"],
+    "note": "Ce cas montre le travail produit côté outil interne, sans exposer l'application ni les écrans propriétaires."
+  }
+]

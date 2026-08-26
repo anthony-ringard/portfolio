@@ -1,0 +1,14 @@
+node_modules
+dist
+.next
+.next.backup-*
+out
+output
+.vite
+.claude
+.git
+.github
+.env
+.env.*
+*.log
+README.md

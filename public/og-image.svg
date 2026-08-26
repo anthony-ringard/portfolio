@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Anthony Ringard - Freelance PHP/Symfony senior</title>
+  <desc id="desc">Portfolio freelance PHP/Symfony, e-commerce et automatisation métier.</desc>
+  <rect width="1200" height="630" fill="#f6f8f7"/>
+  <circle cx="1060" cy="84" r="120" fill="#e2f1ec"/>
+  <path d="M80 126H1120" stroke="#17201d" stroke-opacity="0.12"/>
+  <path d="M80 504H1120" stroke="#17201d" stroke-opacity="0.12"/>
+  <text x="80" y="96" fill="#0f7665" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26" font-weight="600">Freelance PHP/Symfony · e-commerce</text>
+  <text x="80" y="260" fill="#17201d" font-family="IBM Plex Sans, Arial, sans-serif" font-size="72" font-weight="650">Anthony Ringard</text>
+  <text x="80" y="340" fill="#17201d" fill-opacity="0.72" font-family="IBM Plex Sans, Arial, sans-serif" font-size="40">Backends Symfony fiables pour flux métier exigeants.</text>
+  <g transform="translate(80 430)">
+    <rect width="226" height="74" rx="6" fill="#ffffff" stroke="#d9e2df"/>
+    <text x="24" y="46" fill="#17201d" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26">Paiement</text>
+    <path d="M250 37H310" stroke="#9a5b2e" stroke-width="2"/>
+    <rect x="334" width="226" height="74" rx="6" fill="#ffffff" stroke="#d9e2df"/>
+    <text x="358" y="46" fill="#17201d" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26">Catalogue</text>
+    <path d="M584 37H644" stroke="#9a5b2e" stroke-width="2"/>
+    <rect x="668" width="226" height="74" rx="6" fill="#ffffff" stroke="#d9e2df"/>
+    <text x="692" y="46" fill="#17201d" font-family="IBM Plex Sans, Arial, sans-serif" font-size="26">Logistique</text>
+  </g>
+</svg>
