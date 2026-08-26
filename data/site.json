@@ -60,7 +60,7 @@
     },
     "about": {
       "label": "À propos",
-      "title": "10 ans de backend. Pas 10 ans de slides.",
+      "title": "10 ans de backend.",
       "statLabel": "En activité depuis",
       "statValue": "2016",
       "statDetail": "10 ans de PHP/Symfony en production, pas en side-project"
@@ -68,7 +68,7 @@
     "contact": {
       "label": "Contact",
       "title": "Une question avant de se lancer ? Posez-la.",
-      "description": "Cadrage encore flou, doute sur la faisabilité, besoin d'un avis technique : écrivez-moi, même sans brief complet. Pas besoin d'un cahier des charges béton. Full remote / présence ponctuelle possible (Nord), 600 EUR/j."
+      "description": "Cadrage encore flou, doute sur la faisabilité, besoin d'un avis technique : écrivez-moi, même sans brief complet. Pas besoin d'un cahier des charges béton."
     }
   }
 }

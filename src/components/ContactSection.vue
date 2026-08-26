@@ -58,7 +58,7 @@ const socialLinks = computed(() =>
             </div>
 
             <p class="mt-8 text-xs text-paper/50">
-              {{ profile.availability }}. {{ profile.rate }}. {{ profile.location }}.
+              {{ profile.availability }}.
             </p>
 
             <div v-if="socialLinks.length" class="mt-4 flex flex-wrap gap-4 text-sm text-paper/50">
@@ -66,6 +66,8 @@ const socialLinks = computed(() =>
                 v-for="link in socialLinks"
                 :key="link.label"
                 :href="link.href"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="transition-colors hover:text-accent"
               >{{ link.label }}</a>
             </div>
@@ -81,6 +83,8 @@ const socialLinks = computed(() =>
             v-for="link in socialLinks"
             :key="link.label"
             :href="link.href"
+            target="_blank"
+            rel="noopener noreferrer"
             class="transition-colors hover:text-accent"
           >{{ link.label }}</a>
         </div>

@@ -1,18 +1,17 @@
 {
   "name": "Anthony Ringard",
-  "role": "Développeur PHP/Symfony freelance — 10 ans",
+  "role": "Développeur PHP/Symfony freelance Senior — 10 ans",
   "tagline": "Symfony · E-commerce · API · Automatisation métier",
   "headline": "Je fiabilise les backends Symfony et les flux métier e‑commerce.",
-  "pitch": "Freelance PHP/Symfony pour équipes qui doivent stabiliser un socle existant, connecter des outils métier, automatiser du support, de la logistique ou du catalogue, et livrer sans fragiliser la production.",
+  "pitch": "Freelance PHP/Symfony pour équipes qui doivent stabiliser un socle existant, connecter des outils métier, automatiser le support, la logistique ou le catalogue, et livrer sans fragiliser la production.",
   "keywords": ["Symfony", "PHP 8", "Doctrine", "Messenger", "RabbitMQ", "Elasticsearch", "Docker", "Kubernetes", "Vue", "TypeScript", "n8n", "Make", "Zendesk", "Mirakl", "OpenAI"],
-  "recruiterSignals": ["10 ans PHP/Symfony", "Freelance backend", "Vue/TypeScript côté outils métier", "Full remote / présence ponctuelle possible", "600 EUR/j"],
+  "recruiterSignals": ["10 ans PHP/Symfony", "Freelance backend", "Vue/TypeScript côté outils métier", "Full remote / présence ponctuelle possible"],
   "missionCards": [
     { "label": "Disponibilité", "value": "Disponible", "detail": "Full remote / présence ponctuelle possible" },
-    { "label": "TJM", "value": "600 EUR/j", "detail": "mission longue ou renfort" },
+    { "label": "Engagement", "value": "Mission longue", "detail": "ou renfort ponctuel" },
     { "label": "Cible", "value": "Symfony", "detail": "e-commerce / support / ops" }
   ],
   "location": "62 — Full remote / présence ponctuelle possible",
-  "rate": "600 EUR/j",
   "availability": "Disponible en full remote, présence ponctuelle possible (Nord, 2-3j si besoin)",
   "summary": "Développeur PHP/Symfony freelance avec 10 ans d'expérience sur des backends e-commerce, des intégrations métier, des automatisations et des systèmes de production. Historique vérifié sur 2 230 commits suivis entre 2021 et 2026.",
   "about": [
@@ -25,6 +24,6 @@
     "email": "anthony.ringard@gmail.com",
     "malt": "",
     "linkedin": "",
-    "cv": ""
+    "cv": "/anthony-ringard-cv.pdf"
   }
 }
