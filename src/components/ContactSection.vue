@@ -73,21 +73,6 @@ const socialLinks = computed(() =>
           </div>
         </div>
       </RevealBlock>
-
-      <footer class="mt-10 flex flex-col gap-3 border-t border-line pt-6 text-xs text-ink/45 sm:flex-row sm:items-center sm:justify-between">
-        <p>{{ profile.name }} · {{ profile.location }}</p>
-        <div class="flex flex-wrap gap-x-5 gap-y-1">
-          <a :href="mailHref" class="transition-colors hover:text-accent">{{ profile.contact.email }}</a>
-          <a
-            v-for="link in socialLinks"
-            :key="link.label"
-            :href="link.href"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="transition-colors hover:text-accent"
-          >{{ link.label }}</a>
-        </div>
-      </footer>
     </div>
   </section>
 </template>
