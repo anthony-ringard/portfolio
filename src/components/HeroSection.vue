@@ -42,6 +42,13 @@ import RevealBlock from "./RevealBlock.vue";
             <div class="mt-8 flex flex-wrap items-center gap-3">
               <a href="#contact" class="primary-button">{{ site.hero.primaryCta }}</a>
               <a href="#realisations" class="secondary-button">{{ site.hero.secondaryCta }}</a>
+              <a
+                v-if="profile.contact.cv"
+                :href="profile.contact.cv"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="secondary-button"
+              >{{ site.hero.cvCta }}</a>
             </div>
           </RevealBlock>
         </div>

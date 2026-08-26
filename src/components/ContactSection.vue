@@ -11,7 +11,6 @@ const socialLinks = computed(() =>
   [
     { href: profile.contact.malt, label: site.ui.socialMalt },
     { href: profile.contact.linkedin, label: site.ui.socialLinkedin },
-    { href: profile.contact.cv, label: site.ui.socialCv },
   ].filter((l) => Boolean(l.href)),
 );
 </script>
