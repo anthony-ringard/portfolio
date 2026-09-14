@@ -1,49 +1,27 @@
 [
   {
     "id": "business-automation",
-    "name": "Automatisations métier : affiches magasin, Mirakl, Zendesk & IA",
+    "name": "Automatisations métier & support assisté par IA (RAG)",
     "type": "Automatisation e-commerce anonymisée",
     "status": "Réalisé en poste",
     "statusTone": "done",
-    "pitch": "Deux flux automatisés pour retirer du manuel côté magasins et support client : génération d'affiches depuis Slack, puis synchronisation Mirakl/Zendesk avec réponses assistées par IA.",
-    "context": "Il fallait produire rapidement des PDF magasin après inventaire, et transformer les messages marketplace en tickets support suivis dans Zendesk.",
-    "role": "Création de commandes Slack, scénarios n8n, Lambda de génération PDF, orchestration Make toutes les 15 minutes, déclencheurs Zendesk, API interne et appel OpenAI pour préparer les réponses client.",
-    "result": "Les équipes récupèrent leurs PDF/ZIP directement dans Slack. Les messages Mirakl arrivent dans Zendesk sans ressaisie, et les réponses client peuvent être préparées par IA, dans un flux qui reste contrôlé.",
+    "pitch": "Flux automatisés pour retirer du manuel côté magasins et support client : génération d'affiches depuis Slack, synchronisation Mirakl/Zendesk, et réponses support générées via un pipeline RAG plutôt qu'un simple prompt.",
+    "context": "Produire rapidement des PDF magasin après inventaire, transformer les messages marketplace en tickets support suivis, et réduire le temps de traitement des tickets sans perdre en fiabilité : les réponses devaient s'appuyer sur de vrais documents, pas sur des suppositions du modèle.",
+    "role": "Commandes Slack, scénarios n8n, Lambda de génération PDF, orchestration Make toutes les 15 minutes, déclencheurs Zendesk, et pipeline RAG (recherche vectorielle, orchestration d'outils BDD/API/calculs) pour préparer des réponses sourcées.",
+    "result": "Les équipes récupèrent leurs PDF/ZIP directement dans Slack, les messages Mirakl arrivent dans Zendesk sans ressaisie, et les réponses support s'appuient sur les documents réels de l'entreprise — vérifiables, pas inventées.",
     "metrics": [
       { "label": "Templates", "value": "3 affiches" },
-      { "label": "Cadence", "value": "15 min" },
+      { "label": "Approche IA", "value": "RAG" },
       { "label": "Canaux", "value": "Slack + Zendesk" }
     ],
     "impact": [
       "Une affiche PDF par ligne de CSV, regroupée en ZIP directement dans le canal Slack",
       "Moins de copier-coller entre marketplace, support et outils internes",
-      "Réponses assistées par OpenAI via une API interne, sur des règles et déclencheurs déjà en place"
-    ],
-    "stack": ["AWS Lambda", "n8n", "Make", "Slack API", "Google Sheets", "Mirakl", "Zendesk", "OpenAI API"],
-    "note": "Cas anonymisé ; les volumes exacts peuvent être ajoutés dès qu'ils sont confirmés publiquement."
-  },
-  {
-    "id": "ia-rag-support",
-    "name": "Assistant IA en support client (RAG)",
-    "type": "Automatisation e-commerce anonymisée",
-    "status": "Réalisé en poste",
-    "statusTone": "done",
-    "pitch": "Système d'IA conversationnel pour le support client : recherche documentaire vectorisée, orchestration d'outils et intégration API, pour générer des réponses sourcées plutôt qu'inventées.",
-    "context": "Réduire le temps de traitement des tickets support sans perdre en fiabilité : les réponses générées devaient s'appuyer sur de vrais documents, pas sur des suppositions du modèle.",
-    "role": "Pipeline RAG avec recherche vectorielle sur la base documentaire, orchestration des appels outils (BDD, API, calculs), et intégration API pour brancher le tout au support existant.",
-    "result": "Les réponses générées s'appuient sur les documents réels de l'entreprise, pas sur ce que le modèle croit savoir — et restent vérifiables par l'équipe support.",
-    "metrics": [
-      { "label": "Approche", "value": "RAG" },
-      { "label": "Domaine", "value": "Support client" },
-      { "label": "Statut", "value": "En prod" }
-    ],
-    "impact": [
-      "Recherche vectorielle sur la base documentaire plutôt qu'un prompt seul",
-      "Orchestration d'outils : requêtes BDD, appels API, calculs",
+      "Recherche vectorielle et orchestration d'outils, pas un simple prompt",
       "Réponses sourcées, vérifiables par l'équipe support"
     ],
-    "stack": ["OpenAI API", "Recherche vectorielle", "PHP", "Symfony", "API internes"],
-    "note": "Cas anonymisé ; architecture RAG générique, détails d'implémentation propriétaires masqués.",
+    "stack": ["AWS Lambda", "n8n", "Make", "Slack API", "Mirakl", "Zendesk", "OpenAI API", "Recherche vectorielle"],
+    "note": "Cas anonymisé ; les volumes exacts et l'architecture RAG précise restent masqués tant que leur affichage public n'est pas confirmé.",
     "visual": "rag-flow"
   },
   {
