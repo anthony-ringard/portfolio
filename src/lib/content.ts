@@ -24,6 +24,7 @@ export type Project = {
   impact: string[];
   stack: string[];
   note: string;
+  visual?: string;
 };
 
 export type Mission = {

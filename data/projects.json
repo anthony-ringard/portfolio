@@ -23,6 +23,30 @@
     "note": "Cas anonymisé ; les volumes exacts peuvent être ajoutés dès qu'ils sont confirmés publiquement."
   },
   {
+    "id": "ia-rag-support",
+    "name": "Assistant IA en support client (RAG)",
+    "type": "Automatisation e-commerce anonymisée",
+    "status": "Réalisé en poste",
+    "statusTone": "done",
+    "pitch": "Système d'IA conversationnel pour le support client : recherche documentaire vectorisée, orchestration d'outils et intégration API, pour générer des réponses sourcées plutôt qu'inventées.",
+    "context": "Réduire le temps de traitement des tickets support sans perdre en fiabilité : les réponses générées devaient s'appuyer sur de vrais documents, pas sur des suppositions du modèle.",
+    "role": "Pipeline RAG avec recherche vectorielle sur la base documentaire, orchestration des appels outils (BDD, API, calculs), et intégration API pour brancher le tout au support existant.",
+    "result": "Les réponses générées s'appuient sur les documents réels de l'entreprise, pas sur ce que le modèle croit savoir — et restent vérifiables par l'équipe support.",
+    "metrics": [
+      { "label": "Approche", "value": "RAG" },
+      { "label": "Domaine", "value": "Support client" },
+      { "label": "Statut", "value": "En prod" }
+    ],
+    "impact": [
+      "Recherche vectorielle sur la base documentaire plutôt qu'un prompt seul",
+      "Orchestration d'outils : requêtes BDD, appels API, calculs",
+      "Réponses sourcées, vérifiables par l'équipe support"
+    ],
+    "stack": ["OpenAI API", "Recherche vectorielle", "PHP", "Symfony", "API internes"],
+    "note": "Cas anonymisé ; architecture RAG générique, détails d'implémentation propriétaires masqués.",
+    "visual": "rag-flow"
+  },
+  {
     "id": "ia-catalogue",
     "name": "Attributs produit & contenus assistés par IA",
     "type": "Production e-commerce anonymisée",

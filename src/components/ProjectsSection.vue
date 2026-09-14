@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { projects, site } from "../lib/content";
+import RagFlowDiagram from "./RagFlowDiagram.vue";
 import RevealBlock from "./RevealBlock.vue";
 
 const statusStyles: Record<"done" | "progress", string> = {
@@ -34,6 +35,8 @@ const statusStyles: Record<"done" | "progress", string> = {
                   {{ project.name }}
                 </h3>
                 <p class="mt-4 max-w-3xl text-sm leading-7 text-ink/70">{{ project.pitch }}</p>
+
+                <RagFlowDiagram v-if="project.visual === 'rag-flow'" />
 
                 <div class="mt-7 grid gap-5 md:grid-cols-2">
                   <div class="project-detail">
