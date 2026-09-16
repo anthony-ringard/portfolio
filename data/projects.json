@@ -76,22 +76,22 @@
     "type": "Production logistique anonymisée",
     "status": "Réalisé en poste",
     "statusTone": "done",
-    "pitch": "Intégrations transporteurs autour du tracking, de la génération d'étiquettes, des colis et des contraintes logistiques.",
-    "context": "Fiabiliser le suivi colis, la génération d'étiquettes et les reprises d'erreur, dans un environnement logistique déjà en production.",
-    "role": "Développement de clients API, commandes de reprise, contrôleurs, modèles de shipment, générateurs d'étiquettes et configuration d'infrastructure.",
-    "result": "Les flux transport sont isolés proprement et documentés : les équipes qui suivent les commandes n'ont plus besoin de moi pour s'en servir.",
+    "pitch": "Microservice dédié à la génération d'étiquettes, avec une abstraction commune pour une dizaine de transporteurs aux formats tous différents.",
+    "context": "Ajouter un nouveau transporteur sans réécrire la logique d'étiquette à chaque fois, et garder un format de sortie fiable quel que soit le format source.",
+    "role": "Abstraction commune pour Mondial Relay, Geodis, GLS, Hermes, Arrowxl et autres, génération de watermark, gestion du multi-colis, déploiement Kubernetes dédié.",
+    "result": "Ajouter un transporteur est devenu une extension du modèle existant, pas une réécriture : le microservice absorbe la diversité des formats sans complexifier le reste de la plateforme.",
     "metrics": [
-      { "label": "Période", "value": "2021-2026" },
-      { "label": "Flux", "value": "Tracking" },
+      { "label": "Transporteurs", "value": "10+" },
+      { "label": "Commits", "value": "61" },
       { "label": "Support", "value": "Labels" }
     ],
     "impact": [
-      "Récupération et mise à jour des liens et numéros de tracking",
-      "Génération d'étiquettes, adaptée à chaque format transporteur",
-      "Déploiements et workers ajustés au rythme des traitements logistiques"
+      "Abstraction commune malgré des formats de réponse très différents d'un transporteur à l'autre",
+      "Watermark et gestion du multi-colis intégrés au générateur",
+      "Déploiement Kubernetes dédié, isolé du reste de la plateforme"
     ],
-    "stack": ["Symfony", "Commandes CLI", "RabbitMQ / Messenger", "APIs transporteurs", "Docker", "Kubernetes / Helm"],
-    "note": "Cas anonymisé ; les transporteurs précis sont listés dans les questions à confirmer avant publication."
+    "stack": ["Symfony", "Mondial Relay", "Geodis", "GLS", "Hermes", "Docker", "Kubernetes / Helm"],
+    "note": "Cas anonymisé côté plateforme ; les transporteurs listés sont des intégrations publiques standards."
   },
   {
     "id": "wms-reverse",
