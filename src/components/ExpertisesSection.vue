@@ -9,21 +9,16 @@ import RevealBlock from "./RevealBlock.vue";
       <RevealBlock>
         <p class="section-label">{{ site.sections.expertises.label }}</p>
         <h2 class="section-title mt-4">{{ site.sections.expertises.title }}</h2>
-        <p class="mt-4 max-w-2xl text-sm leading-6 text-ink/60">{{ site.sections.expertises.intro }}</p>
-      </RevealBlock>
 
-      <!-- Mots-clés -->
-      <RevealBlock :delay="60">
-        <h3 class="mt-10 text-xs font-semibold uppercase tracking-wider text-ink/45">
-          {{ site.ui.keywordsTitle }}
-        </h3>
-        <ul class="mt-4 flex flex-wrap gap-2">
+        <ul class="mt-6 flex flex-wrap gap-2">
           <li
             v-for="keyword in profile.keywords"
             :key="keyword"
             class="rounded-full border border-line bg-paper px-3 py-1 text-xs text-ink/65"
           >{{ keyword }}</li>
         </ul>
+
+        <p class="mt-6 max-w-2xl text-sm leading-6 text-ink/60">{{ site.sections.expertises.intro }}</p>
       </RevealBlock>
 
       <!-- Lignes d'expertise -->
