@@ -55,7 +55,7 @@
     "statusTone": "done",
     "pitch": "Intégration de moyens de paiement pensés conversion (Apple Pay, Klarna, Alma) et automatisation du contrôle des commandes, sur un checkout qui reste stable pendant que le paiement se complexifie.",
     "context": "Ajouter des moyens de paiement et des règles de remboursement sans jamais fragiliser un checkout déjà en production.",
-    "role": "Apple Pay Express en page produit et checkout (sans compte requis), Alma et Klarna pour le paiement fractionné, HiPay pour le TPE, automatisation de la validation des commandes via IBAN virtuel.",
+    "role": "HiPay comme prestataire de paiement carte (hosted fields, refunds, multi-comptes B2B), Apple Pay Express en page produit et checkout, Alma et Klarna pour le paiement fractionné, TPE pour le click and collect, automatisation de la validation des commandes via IBAN virtuel.",
     "result": "Klarna a été déterminant pour l'implantation sur le marché allemand, Apple Pay Express a simplifié le tunnel d'achat, et les IBAN virtuels ont supprimé le contrôle manuel des paiements à réception.",
     "metrics": [
       { "label": "Période", "value": "2022-2025" },
