@@ -27,6 +27,7 @@
       "n8n, Make, commandes Slack, webhooks, workers, traitements par lot",
       "Génération PDF/ZIP, synchro de tickets, appels API internes",
       "OpenAI/GPT pour enrichir un catalogue ou préparer des réponses support, dans un flux contrôlé",
+      "Claude Code / Codex au quotidien, avec relecture critique systématique avant merge",
       "Pensés pour être utilisés par une équipe, pas juste pour tourner en démo"
     ]
   },
@@ -47,6 +48,7 @@
     "points": [
       "Docker, GitLab CI, Kubernetes, Helm, valeurs d'environnement",
       "Consumers, cronjobs, workers, healthchecks",
+      "Revue de code obligatoire (2 approbations mini) avant tout merge",
       "Des correctifs de prod à périmètre limité, qu'on peut retracer après coup"
     ]
   }

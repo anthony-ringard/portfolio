@@ -30,7 +30,7 @@
     "type": "Production e-commerce anonymisée",
     "status": "Réalisé en poste",
     "statusTone": "done",
-    "pitch": "Workflow asynchrone pour enrichir les données produit, générer des attributs catalogue et préparer leur exploitation côté recherche, filtres et back-office.",
+    "pitch": "Workflow asynchrone pour enrichir les données produit, générer des attributs catalogue, traduire les fiches à la volée et préparer leur exploitation côté recherche, filtres et back-office.",
     "context": "Publier et exploiter un catalogue plus riche, sans bloquer le parcours utilisateur ni dépendre d'opérations manuelles à rallonge.",
     "role": "Mise en place de messages et handlers Messenger, commande CLI, générateurs de prompts, accès Doctrine et orchestration du traitement.",
     "result": "Le traitement catalogue tourne maintenant hors du parcours utilisateur, en tâche de fond : l'équipe peut le relancer et le surveiller elle-même.",
@@ -41,8 +41,8 @@
     ],
     "impact": [
       "Les traitements longs vont aux workers, pas au parcours utilisateur",
-      "L'IA comme composant contrôlé, pas comme argument marketing",
-      "Intégration avec les modèles produit, la recherche et le back-office"
+      "Traduction automatique déclenchée à la saisie, statut \"à relire\" avant publication",
+      "L'IA comme composant contrôlé, pas comme argument marketing"
     ],
     "stack": ["PHP", "Symfony Messenger", "OpenAI", "Doctrine", "Elasticsearch", "Back-office"],
     "note": "Cas anonymisé à partir de l'historique de commits ; tickets et noms internes masqués."
@@ -53,22 +53,22 @@
     "type": "Production e-commerce anonymisée",
     "status": "Réalisé en poste",
     "statusTone": "done",
-    "pitch": "Évolutions backend sur des flux de paiement, de checkout et de remboursement avec statuts, validations et retours prestataires.",
-    "context": "Garder un checkout stable pendant qu'on ajoute des moyens de paiement, des remboursements et des règles commerciales.",
-    "role": "Interventions sur contrôleurs, services de paiement, commandes Symfony, migrations Doctrine, retours prestataires et cas d'erreur.",
-    "result": "Le checkout a gagné des règles explicites côté backend, plutôt qu'éparpillées un peu partout, et les correctifs sont livrés sans jamais le déstabiliser.",
+    "pitch": "Intégration de moyens de paiement pensés conversion (Apple Pay, Klarna, Alma) et automatisation du contrôle des commandes, sur un checkout qui reste stable pendant que le paiement se complexifie.",
+    "context": "Ajouter des moyens de paiement et des règles de remboursement sans jamais fragiliser un checkout déjà en production.",
+    "role": "Apple Pay Express en page produit et checkout (sans compte requis), Alma et Klarna pour le paiement fractionné, HiPay pour le TPE, automatisation de la validation des commandes via IBAN virtuel.",
+    "result": "Klarna a été déterminant pour l'implantation sur le marché allemand, Apple Pay Express a simplifié le tunnel d'achat, et les IBAN virtuels ont supprimé le contrôle manuel des paiements à réception.",
     "metrics": [
       { "label": "Période", "value": "2022-2025" },
-      { "label": "Surface", "value": "Checkout" },
+      { "label": "Moyens", "value": "Apple Pay, Klarna, Alma" },
       { "label": "Flux", "value": "Paiement + refund" }
     ],
     "impact": [
-      "Statuts et validations gérés côté backend, pas éparpillés dans le code",
-      "Remboursements partiels, commerciaux ou liés au moyen de paiement, tous pris en compte",
-      "Des évolutions qui tiennent dans un environnement déjà en production, pas en labo"
+      "Apple Pay Express : paiement sans compte, en page produit et checkout",
+      "Klarna : déterminant pour l'implantation sur le marché allemand",
+      "IBAN virtuels : validation des commandes automatisée, notification bancaire directe"
     ],
-    "stack": ["PHP", "Symfony", "Doctrine", "Contrôleurs API", "Tests", "Back-office"],
-    "note": "Les noms de prestataires existent dans l'historique, mais restent masqués tant que leur affichage public n'est pas confirmé."
+    "stack": ["PHP", "Symfony", "Doctrine", "Apple Pay", "Klarna", "Alma", "HiPay"],
+    "note": "Cas anonymisé côté plateforme ; les moyens de paiement listés sont des intégrations publiques standards."
   },
   {
     "id": "transport-labels",
