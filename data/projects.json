@@ -2,7 +2,7 @@
   {
     "id": "business-automation",
     "name": "Automatisations métier & support assisté par IA (RAG)",
-    "type": "Automatisation e-commerce anonymisée",
+    "type": "Automatisation e-commerce",
     "status": "Réalisé en poste",
     "statusTone": "done",
     "pitch": "Flux automatisés pour retirer du manuel côté magasins et support client : génération d'affiches depuis Slack, synchronisation Mirakl/Zendesk, et réponses support générées via un pipeline RAG plutôt qu'un simple prompt.",
@@ -27,7 +27,7 @@
   {
     "id": "ia-catalogue",
     "name": "Attributs produit & contenus assistés par IA",
-    "type": "Production e-commerce anonymisée",
+    "type": "Production e-commerce",
     "status": "Réalisé en poste",
     "statusTone": "done",
     "pitch": "Workflow asynchrone pour enrichir les données produit, générer des attributs catalogue, traduire les fiches à la volée et préparer leur exploitation côté recherche, filtres et back-office.",
@@ -50,7 +50,7 @@
   {
     "id": "payment-refund",
     "name": "Paiement, checkout & remboursements",
-    "type": "Production e-commerce anonymisée",
+    "type": "Production e-commerce",
     "status": "Réalisé en poste",
     "statusTone": "done",
     "pitch": "Intégration de moyens de paiement pensés conversion (Apple Pay, Klarna, Alma) et automatisation du contrôle des commandes, sur un checkout qui reste stable pendant que le paiement se complexifie.",
@@ -73,7 +73,7 @@
   {
     "id": "transport-labels",
     "name": "Tracking, transporteurs & étiquettes",
-    "type": "Production logistique anonymisée",
+    "type": "Production logistique",
     "status": "Réalisé en poste",
     "statusTone": "done",
     "pitch": "Microservice dédié à la génération d'étiquettes, avec une abstraction commune pour une dizaine de transporteurs aux formats tous différents.",
@@ -81,8 +81,8 @@
     "role": "Abstraction commune pour Mondial Relay, Geodis, GLS, Hermes, Arrowxl et autres, génération de watermark, gestion du multi-colis, déploiement Kubernetes dédié.",
     "result": "Ajouter un transporteur est devenu une extension du modèle existant, pas une réécriture : le microservice absorbe la diversité des formats sans complexifier le reste de la plateforme.",
     "metrics": [
-      { "label": "Transporteurs", "value": "10+" },
-      { "label": "Commits", "value": "61" },
+      { "label": "Période", "value": "2025-2026" },
+      { "label": "Domaine", "value": "Logistique" },
       { "label": "Support", "value": "Labels" }
     ],
     "impact": [
@@ -96,7 +96,7 @@
   {
     "id": "wms-reverse",
     "name": "WMS reverse, stockage & remboursement",
-    "type": "Production interne anonymisée",
+    "type": "Production interne",
     "status": "Réalisé en poste",
     "statusTone": "done",
     "pitch": "Parcours de retour produit dans un WMS : recherche de commande, sélection des produits, stockage, remboursement et page finale.",
