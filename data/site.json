@@ -18,7 +18,7 @@
     "aboutMarkers": [
       { "label": "Autonome", "detail": "Je prends un sujet du cadrage à la mise en prod, sans attendre d'instructions." },
       { "label": "Direct", "detail": "Un seul interlocuteur technique, pas de couche de gestion intermédiaire." },
-      { "label": "Senior", "detail": "10 ans intégré dans des équipes produit, pas seulement en mission courte." },
+      { "label": "Senior", "detail": "12 ans intégré dans des équipes produit, pas seulement en mission courte." },
       { "label": "Production", "detail": "Habitué aux astreintes et aux correctifs en conditions réelles, pas qu'au code propre en local." }
     ],
     "socialMalt": "Malt",
@@ -61,10 +61,10 @@
     },
     "about": {
       "label": "À propos",
-      "title": "10 ans de backend.",
+      "title": "12 ans de backend.",
       "statLabel": "En activité depuis",
-      "statValue": "2016",
-      "statDetail": "10 ans de PHP/Symfony en production, pas en side-project"
+      "statValue": "2014",
+      "statDetail": "12 ans de PHP/Symfony en production, pas en side-project"
     },
     "contact": {
       "label": "Contact",
