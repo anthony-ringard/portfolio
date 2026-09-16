@@ -4,7 +4,7 @@
   "tagline": "Symfony · E-commerce · API · Automatisation métier",
   "headline": "Je fiabilise les backends Symfony et les flux métier e‑commerce.",
   "pitch": "Freelance PHP/Symfony pour équipes qui doivent stabiliser un socle existant, connecter des outils métier, automatiser le support, la logistique ou le catalogue, et livrer sans fragiliser la production.",
-  "keywords": ["Symfony", "PHP 8", "Doctrine", "Messenger", "RabbitMQ", "Elasticsearch", "Docker", "Kubernetes", "Vue", "TypeScript", "n8n", "Make", "Zendesk", "Mirakl", "OpenAI"],
+  "keywords": ["Symfony", "PHP 8", "API Platform", "Doctrine", "Messenger", "RabbitMQ", "PostgreSQL", "MySQL", "Elasticsearch", "Docker", "Kubernetes", "Helm", "GitLab CI", "JWT", "OAuth2", "Vue", "TypeScript", "SvelteKit", "n8n", "Make", "Zendesk", "Mirakl", "OpenAI", "Claude Code", "Codex", "Stripe", "Apple Pay", "Klarna", "Alma", "HiPay", "Scrum", "Kanban"],
   "recruiterSignals": ["12 ans PHP/Symfony", "Freelance backend", "Vue/TypeScript côté outils métier", "Full remote / présence ponctuelle possible"],
   "missionCards": [
     { "label": "Disponibilité", "value": "Disponible", "detail": "Full remote / présence ponctuelle possible" },
