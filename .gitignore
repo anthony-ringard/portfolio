@@ -16,3 +16,4 @@ output
 docs/
 *.htm
 *_files/
+.idea/

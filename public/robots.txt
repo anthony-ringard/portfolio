@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /audit/merci
+
+Sitemap: https://anthonyringard.dev/sitemap.xml

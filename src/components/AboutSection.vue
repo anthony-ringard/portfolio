@@ -4,7 +4,7 @@ import RevealBlock from "./RevealBlock.vue";
 </script>
 
 <template>
-  <section id="about" class="px-6 py-24 scroll-mt-24 md:py-28">
+  <section id="about" class="px-6 py-28 scroll-mt-24 md:py-32">
     <div class="mx-auto max-w-6xl">
       <div class="grid gap-12 md:grid-cols-[1fr_16rem] md:items-start">
         <div>

@@ -4,18 +4,18 @@ import RevealBlock from "./RevealBlock.vue";
 </script>
 
 <template>
-  <section id="missions" class="section-band px-6 py-24 scroll-mt-24 md:py-28">
+  <section id="missions" class="section-band px-6 py-28 scroll-mt-24 md:py-32">
     <div class="mx-auto max-w-6xl">
       <RevealBlock>
         <p class="section-label">{{ site.sections.missions.label }}</p>
         <h2 class="section-title mt-4">{{ site.sections.missions.title }}</h2>
       </RevealBlock>
 
-      <div class="mt-14 grid gap-10 lg:grid-cols-3">
+      <div class="mt-16 grid gap-12 lg:grid-cols-3">
         <RevealBlock
           v-for="(mission, index) in missions.items"
           :key="mission.title"
-          :delay="index * 80"
+          :delay="index * 50"
         >
           <article class="panel h-full pt-6">
             <span class="text-sm font-semibold text-accent/80">0{{ index + 1 }}</span>
@@ -37,7 +37,7 @@ import RevealBlock from "./RevealBlock.vue";
       </div>
 
       <!-- Bon contexte seul — sobre, en pied de section -->
-      <RevealBlock :delay="280">
+      <RevealBlock :delay="160">
         <div class="mt-14 border-t border-line pt-8">
           <h3 class="text-xs font-semibold uppercase tracking-wider text-ink/45">
             {{ site.ui.goodFitTitle }}

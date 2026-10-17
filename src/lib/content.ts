@@ -10,6 +10,11 @@ export type Metric = {
   value: string;
 };
 
+export type FlowStep = {
+  label: string;
+  detail: string;
+};
+
 export type Project = {
   id: string;
   name: string;
@@ -24,7 +29,7 @@ export type Project = {
   impact: string[];
   stack: string[];
   note: string;
-  visual?: string;
+  flowSteps?: FlowStep[];
 };
 
 export type Mission = {

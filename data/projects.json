@@ -22,7 +22,12 @@
     ],
     "stack": ["AWS Lambda", "n8n", "Make", "Slack API", "Mirakl", "Zendesk", "OpenAI API", "Recherche vectorielle"],
     "note": "Cas anonymisé ; les volumes exacts et l'architecture RAG précise restent masqués tant que leur affichage public n'est pas confirmé.",
-    "visual": "rag-flow"
+    "flowSteps": [
+      { "label": "Requête", "detail": "Question posée" },
+      { "label": "Recherche", "detail": "Documents vectorisés" },
+      { "label": "Outils", "detail": "BDD, API, calculs" },
+      { "label": "Réponse", "detail": "Générée, sourcée" }
+    ]
   },
   {
     "id": "ia-catalogue",
@@ -45,7 +50,13 @@
       "L'IA comme composant contrôlé, pas comme argument marketing"
     ],
     "stack": ["PHP", "Symfony Messenger", "OpenAI", "Doctrine", "Elasticsearch", "Back-office"],
-    "note": "Cas anonymisé à partir de l'historique de commits ; tickets et noms internes masqués."
+    "note": "Cas anonymisé à partir de l'historique de commits ; tickets et noms internes masqués.",
+    "flowSteps": [
+      { "label": "Saisie produit", "detail": "Déclenche le message" },
+      { "label": "Messenger", "detail": "Handler async" },
+      { "label": "Génération IA", "detail": "Attributs, traduction" },
+      { "label": "À relire", "detail": "Avant publication" }
+    ]
   },
   {
     "id": "payment-refund",
@@ -68,7 +79,13 @@
       "IBAN virtuels : validation des commandes automatisée, notification bancaire directe"
     ],
     "stack": ["PHP", "Symfony", "Doctrine", "Apple Pay", "Klarna", "Alma", "HiPay"],
-    "note": "Cas anonymisé côté plateforme ; les moyens de paiement listés sont des intégrations publiques standards."
+    "note": "Cas anonymisé côté plateforme ; les moyens de paiement listés sont des intégrations publiques standards.",
+    "flowSteps": [
+      { "label": "Commande", "detail": "Checkout validé" },
+      { "label": "Paiement", "detail": "Stripe/Klarna/Alma" },
+      { "label": "Contrôle", "detail": "IBAN virtuel auto" },
+      { "label": "Remboursement", "detail": "Si besoin" }
+    ]
   },
   {
     "id": "transport-labels",
@@ -91,7 +108,13 @@
       "Déploiement Kubernetes dédié, isolé du reste de la plateforme"
     ],
     "stack": ["Symfony", "Mondial Relay", "Geodis", "GLS", "Hermes", "Docker", "Kubernetes / Helm"],
-    "note": "Cas anonymisé côté plateforme ; les transporteurs listés sont des intégrations publiques standards."
+    "note": "Cas anonymisé côté plateforme ; les transporteurs listés sont des intégrations publiques standards.",
+    "flowSteps": [
+      { "label": "Commande", "detail": "Transporteur choisi" },
+      { "label": "Abstraction", "detail": "Format commun" },
+      { "label": "Étiquette", "detail": "Watermark, multi-colis" },
+      { "label": "Tracking", "detail": "Suivi colis" }
+    ]
   },
   {
     "id": "wms-reverse",
@@ -114,6 +137,12 @@
       "Correction de plusieurs cas litigieux sur les remboursements multiples"
     ],
     "stack": ["SvelteKit", "TypeScript", "Clients API", "Interfaces métier", "i18n"],
-    "note": "Ce cas montre le travail produit côté outil interne, sans exposer l'application ni les écrans propriétaires."
+    "note": "Ce cas montre le travail produit côté outil interne, sans exposer l'application ni les écrans propriétaires.",
+    "flowSteps": [
+      { "label": "Recherche", "detail": "Commande identifiée" },
+      { "label": "Produits", "detail": "Sélection retour" },
+      { "label": "Stockage", "detail": "Allocation validée" },
+      { "label": "Remboursement", "detail": "Confirmation finale" }
+    ]
   }
 ]

@@ -1,10 +1,7 @@
 <script setup lang="ts">
-const steps = [
-  { label: "Requête", detail: "Question posée" },
-  { label: "Recherche", detail: "Documents vectorisés" },
-  { label: "Outils", detail: "BDD, API, calculs" },
-  { label: "Réponse", detail: "Générée, sourcée" },
-];
+defineProps<{
+  steps: { label: string; detail: string }[];
+}>();
 </script>
 
 <template>
@@ -16,6 +13,7 @@ const steps = [
       </div>
       <div
         v-if="index < steps.length - 1"
+        data-testid="flow-arrow"
         class="flex items-center justify-center text-accent/60"
       >
         →

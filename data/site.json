@@ -3,8 +3,7 @@
     { "href": "#missions", "label": "missions" },
     { "href": "#realisations", "label": "réalisations" },
     { "href": "#expertises", "label": "expertises" },
-    { "href": "#about", "label": "à propos" },
-    { "href": "#contact", "label": "contact" }
+    { "href": "#about", "label": "à propos" }
   ],
   "ui": {
     "skipLink": "Aller au contenu",

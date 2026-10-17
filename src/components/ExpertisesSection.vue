@@ -4,7 +4,7 @@ import RevealBlock from "./RevealBlock.vue";
 </script>
 
 <template>
-  <section id="expertises" class="section-band px-6 py-24 scroll-mt-24 md:py-28">
+  <section id="expertises" class="section-band px-6 py-28 scroll-mt-24 md:py-32">
     <div class="mx-auto max-w-6xl">
       <RevealBlock>
         <p class="section-label">{{ site.sections.expertises.label }}</p>
@@ -23,7 +23,7 @@ import RevealBlock from "./RevealBlock.vue";
 
       <!-- Lignes d'expertise -->
       <div class="mt-12 border-t border-line">
-        <RevealBlock v-for="(item, i) in expertises" :key="item.id" :delay="i * 80">
+        <RevealBlock v-for="(item, i) in expertises" :key="item.id" :delay="i * 50">
           <article
             class="expertise-row grid gap-6 border-b border-line py-7 md:grid-cols-[0.9fr_1.6fr]"
           >
@@ -47,7 +47,7 @@ import RevealBlock from "./RevealBlock.vue";
       </div>
 
       <!-- Bon contexte + Repères -->
-      <RevealBlock :delay="360">
+      <RevealBlock :delay="140">
         <div class="mt-12 grid gap-10 md:grid-cols-2">
           <div>
             <h3 class="text-xs font-semibold uppercase tracking-wider text-ink/45">

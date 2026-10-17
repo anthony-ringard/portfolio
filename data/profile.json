@@ -21,9 +21,9 @@
     "Une question sur un point technique, un contexte particulier, ou juste l'envie d'échanger avant de se lancer ? Écrivez-moi directement. Douze ans sur des sujets réels, ça donne des réponses concrètes plutôt que des suppositions."
   ],
   "contact": {
-    "email": "anthony.ringard@gmail.com",
+    "emailObfuscated": "bW9jLmxpYW1nQGRyYWduaXIueW5vaHRuYQ==",
     "malt": "",
-    "linkedin": "",
+    "linkedin": "https://www.linkedin.com/in/anthony-ringard-430528101/",
     "cv": "/anthony-ringard-cv.pdf"
   }
 }

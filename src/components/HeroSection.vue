@@ -1,6 +1,18 @@
 <script setup lang="ts">
+import { computed } from "vue";
 import { profile, site } from "../lib/content";
+import { CALENDLY_LINK } from "../lib/constants";
+import { buildMailHref, revealEmail } from "../lib/email";
+import MidPageCta from "./MidPageCta.vue";
 import RevealBlock from "./RevealBlock.vue";
+
+const mailHref = computed(() =>
+  buildMailHref(
+    revealEmail(profile.contact.emailObfuscated),
+    site.ui.mailSubject,
+    site.ui.mailBody,
+  ),
+);
 </script>
 
 <template>
@@ -40,7 +52,7 @@ import RevealBlock from "./RevealBlock.vue";
             </dl>
 
             <div class="mt-8 flex flex-wrap items-center gap-3">
-              <a href="#contact" class="primary-button">{{ site.hero.primaryCta }}</a>
+              <RouterLink to="/contact" class="primary-button">{{ site.hero.primaryCta }}</RouterLink>
               <a href="#realisations" class="secondary-button">{{ site.hero.secondaryCta }}</a>
               <a
                 v-if="profile.contact.cv"
@@ -51,30 +63,52 @@ import RevealBlock from "./RevealBlock.vue";
               >{{ site.hero.cvCta }}</a>
             </div>
           </RevealBlock>
+
+          <RevealBlock :delay="120">
+            <div class="mt-8">
+              <MidPageCta :calendly-href="CALENDLY_LINK" :mail-href="mailHref" />
+            </div>
+          </RevealBlock>
         </div>
 
-        <!-- Panel flottant -->
-        <RevealBlock :delay="200">
-          <aside class="hero-panel lg:mt-8">
-            <div class="hero-signal" aria-hidden="true">
-              <span class="hero-signal-line"></span>
-              <span v-for="index in 5" :key="index" class="hero-signal-node"></span>
-            </div>
+        <!-- Colonne photo + process -->
+        <RevealBlock :delay="120">
+          <aside class="lg:mt-8 flex flex-col gap-5">
+            <figure class="hero-portrait">
+              <img
+                src="/anthony-portrait.jpg"
+                :alt="`Portrait de ${profile.name}`"
+                class="hero-portrait-img"
+                width="640"
+                height="640"
+              />
+              <figcaption class="hero-portrait-caption">
+                <span class="hero-portrait-dot" aria-hidden="true"></span>
+                Disponible — réponse sous 24h
+              </figcaption>
+            </figure>
 
-            <p class="text-xs font-semibold uppercase tracking-wider text-ink/45">
-              {{ site.hero.diagramTitle }}
-            </p>
-            <ol class="mt-4 space-y-2.5">
-              <li
-                v-for="(step, index) in site.hero.diagramSteps"
-                :key="step"
-                class="workflow-step"
-              >
-                <span class="workflow-index">0{{ index + 1 }}</span>
-                <span>{{ step }}</span>
-              </li>
-            </ol>
-            <p class="mt-4 text-xs leading-5 text-ink/50">{{ site.hero.diagramFootnote }}</p>
+            <div class="hero-panel hero-panel--compact">
+              <div class="hero-signal" aria-hidden="true">
+                <span class="hero-signal-line"></span>
+                <span v-for="index in 5" :key="index" class="hero-signal-node"></span>
+              </div>
+
+              <p class="text-xs font-semibold uppercase tracking-wider text-ink/45">
+                {{ site.hero.diagramTitle }}
+              </p>
+              <ol class="mt-4 space-y-2.5">
+                <li
+                  v-for="(step, index) in site.hero.diagramSteps"
+                  :key="step"
+                  class="workflow-step"
+                >
+                  <span class="workflow-index">0{{ index + 1 }}</span>
+                  <span>{{ step }}</span>
+                </li>
+              </ol>
+              <p class="mt-4 text-xs leading-5 text-ink/50">{{ site.hero.diagramFootnote }}</p>
+            </div>
           </aside>
         </RevealBlock>
 

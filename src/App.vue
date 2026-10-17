@@ -1,23 +1,18 @@
 <script setup lang="ts">
-import AboutSection from "./components/AboutSection.vue";
-import ContactSection from "./components/ContactSection.vue";
-import ExpertisesSection from "./components/ExpertisesSection.vue";
-import HeroSection from "./components/HeroSection.vue";
-import MissionsSection from "./components/MissionsSection.vue";
+import AppFooter from "./components/AppFooter.vue";
+import LaunchBanner from "./components/LaunchBanner.vue";
 import NavBar from "./components/NavBar.vue";
-import ProjectsSection from "./components/ProjectsSection.vue";
 </script>
 
 <template>
   <div aria-hidden="true" class="bg-grid"></div>
   <div aria-hidden="true" class="scroll-progress"></div>
-  <NavBar />
+  <div class="sticky top-0 z-50">
+    <LaunchBanner />
+    <NavBar />
+  </div>
   <main id="main" class="overflow-x-hidden">
-    <HeroSection />
-    <MissionsSection />
-    <ProjectsSection />
-    <ExpertisesSection />
-    <AboutSection />
-    <ContactSection />
+    <RouterView />
   </main>
+  <AppFooter />
 </template>

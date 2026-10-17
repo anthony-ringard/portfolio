@@ -8,17 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#17201d",
-        "ink-light": "#31413b",
-        paper: "#f6f8f7",
+        ink: "#202321",
+        "ink-light": "#4D514C",
+        paper: "#F5F1E8",
         panel: "#ffffff",
-        accent: "#0f7665",
-        "accent-dim": "#e2f1ec",
-        warm: "#9a5b2e",
-        line: "#d9e2df",
+        accent: "#009FAF",
+        "accent-dim": "#DCF3F5",
+        warm: "#D8C8A8",
+        line: "#E4DED0",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["var(--font-display)", "var(--font-sans)", "ui-sans-serif", "sans-serif"],
       },
     },
   },

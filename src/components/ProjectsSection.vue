@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { projects, site } from "../lib/content";
-import RagFlowDiagram from "./RagFlowDiagram.vue";
+import ProjectFlowDiagram from "./ProjectFlowDiagram.vue";
 import RevealBlock from "./RevealBlock.vue";
 
 const statusStyles: Record<"done" | "progress", string> = {
@@ -10,7 +10,7 @@ const statusStyles: Record<"done" | "progress", string> = {
 </script>
 
 <template>
-  <section id="realisations" class="px-6 py-24 scroll-mt-24 md:py-32">
+  <section id="realisations" class="px-6 py-28 scroll-mt-24 md:py-36">
     <div class="mx-auto max-w-6xl">
       <RevealBlock>
         <p class="section-label">{{ site.sections.projects.label }}</p>
@@ -20,11 +20,11 @@ const statusStyles: Record<"done" | "progress", string> = {
         </p>
       </RevealBlock>
 
-      <div class="project-list mt-14 space-y-6">
+      <div class="project-list mt-14 space-y-8">
         <RevealBlock
           v-for="(project, i) in projects"
           :key="project.id"
-          :delay="i * 60"
+          :delay="i * 40"
         >
           <article :class="[i === 0 ? 'project-featured' : 'project-row', 'group']">
             <div class="grid gap-6 lg:grid-cols-[14rem_1fr]">
@@ -36,7 +36,7 @@ const statusStyles: Record<"done" | "progress", string> = {
                 </h3>
                 <p class="mt-4 max-w-3xl text-sm leading-7 text-ink/70">{{ project.pitch }}</p>
 
-                <RagFlowDiagram v-if="project.visual === 'rag-flow'" />
+                <ProjectFlowDiagram v-if="project.flowSteps" :steps="project.flowSteps" />
 
                 <div class="mt-7 grid gap-5 md:grid-cols-2">
                   <div class="project-detail">
@@ -83,10 +83,6 @@ const statusStyles: Record<"done" | "progress", string> = {
           </article>
         </RevealBlock>
       </div>
-
-      <p class="mt-10 max-w-xl text-xs leading-5 text-ink/40">
-        Cas anonymisés à partir de l'historique de commits ; volumes, prestataires et noms internes masqués.
-      </p>
     </div>
   </section>
 </template>
