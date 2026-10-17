@@ -1,14 +1,26 @@
 const SITE_ORIGIN = "https://anthonyringard.dev";
 
+function upsertMeta(attr: "name" | "property", key: string, content: string): void {
+  let tag = document.querySelector(`meta[${attr}="${key}"]`);
+  if (!tag) {
+    tag = document.createElement("meta");
+    tag.setAttribute(attr, key);
+    document.head.appendChild(tag);
+  }
+  tag.setAttribute("content", content);
+}
+
 /**
- * Met à jour le titre, la meta description et le lien canonical de la page
- * active. Nécessaire car c'est une SPA 100% client (pas de pré-rendu) : sans
- * ça, toutes les routes partageraient le même <title>/description/canonical
- * de index.html, ce qui indique à Google que /audit, /contact etc. sont des
- * doublons de la page d'accueil — et les empêche d'être indexées à part.
+ * Met à jour le titre, la meta description, le canonical, et les balises
+ * Open Graph / Twitter de la page active. Nécessaire car c'est une SPA 100%
+ * client (pas de pré-rendu) : sans ça, toutes les routes partageraient le
+ * même <title>/description/canonical/og: de index.html — Google indexerait
+ * /audit comme un doublon de la homepage, et partager /audit sur LinkedIn
+ * afficherait le titre générique de la homepage au lieu du bon aperçu.
  */
 export function setSeo(title: string, description: string, path: string): void {
   document.title = title;
+  const url = `${SITE_ORIGIN}${path}`;
 
   let metaDescription = document.querySelector('meta[name="description"]');
   if (!metaDescription) {
@@ -24,5 +36,11 @@ export function setSeo(title: string, description: string, path: string): void {
     canonical.setAttribute("rel", "canonical");
     document.head.appendChild(canonical);
   }
-  canonical.setAttribute("href", `${SITE_ORIGIN}${path}`);
+  canonical.setAttribute("href", url);
+
+  upsertMeta("property", "og:title", title);
+  upsertMeta("property", "og:description", description);
+  upsertMeta("property", "og:url", url);
+  upsertMeta("name", "twitter:title", title);
+  upsertMeta("name", "twitter:description", description);
 }

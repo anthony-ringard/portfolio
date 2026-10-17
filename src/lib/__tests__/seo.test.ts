@@ -33,4 +33,33 @@ describe("setSeo", () => {
     expect(links.length).toBe(1);
     expect(links[0].getAttribute("href")).toBe("https://anthonyringard.dev/contact");
   });
+
+  it("met à jour og:title, og:description et og:url pour le partage social", () => {
+    setSeo("Mon titre", "Ma description", "/audit");
+    expect(document.querySelector('meta[property="og:title"]')?.getAttribute("content")).toBe(
+      "Mon titre",
+    );
+    expect(
+      document.querySelector('meta[property="og:description"]')?.getAttribute("content"),
+    ).toBe("Ma description");
+    expect(document.querySelector('meta[property="og:url"]')?.getAttribute("content")).toBe(
+      "https://anthonyringard.dev/audit",
+    );
+  });
+
+  it("met à jour twitter:title et twitter:description", () => {
+    setSeo("Mon titre", "Ma description", "/audit");
+    expect(
+      document.querySelector('meta[name="twitter:title"]')?.getAttribute("content"),
+    ).toBe("Mon titre");
+    expect(
+      document.querySelector('meta[name="twitter:description"]')?.getAttribute("content"),
+    ).toBe("Ma description");
+  });
+
+  it("ne duplique pas les balises og: au 2e appel", () => {
+    setSeo("A", "B", "/audit");
+    setSeo("C", "D", "/contact");
+    expect(document.querySelectorAll('meta[property="og:title"]').length).toBe(1);
+  });
 });
