@@ -34,6 +34,7 @@
     "primaryCta": "Parler d'une mission",
     "secondaryCta": "Voir les cas concrets",
     "cvCta": "Télécharger mon CV",
+    "dossierCta": "Dossier\nde compétences",
     "diagramTitle": "Intervention type",
     "diagramSteps": ["Problème métier", "Cadrage technique", "Traitement async", "Intégration externe", "Suivi production"],
     "diagramFootnote": "Lisible pour la technique, utilisable directement par les équipes."

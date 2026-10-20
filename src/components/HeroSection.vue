@@ -18,7 +18,7 @@ const mailHref = computed(() =>
 <template>
   <section id="top" class="hero-shell px-6 pb-24 pt-28 scroll-mt-24 md:pb-32 md:pt-36">
     <div class="mx-auto max-w-6xl">
-      <div class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+      <div class="grid gap-14 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
 
         <!-- Colonne principale -->
         <div class="min-w-0">
@@ -61,6 +61,14 @@ const mailHref = computed(() =>
                 rel="noopener noreferrer"
                 class="secondary-button"
               >{{ site.hero.cvCta }}</a>
+              <a
+                v-if="profile.contact.dossierCompetences"
+                :href="profile.contact.dossierCompetences"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="secondary-button text-center leading-tight"
+                style="white-space: pre-line"
+              >{{ site.hero.dossierCta }}</a>
             </div>
           </RevealBlock>
 
